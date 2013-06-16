@@ -184,6 +184,23 @@ NSArray *items = NULL;
         
         NSLog(@"%@",@"Deleted");
         
+        
+        NSString *subTotalString = [[NSString alloc] initWithFormat:@"http://simpligro.com/api/transaction_subtotal.json?id=%@", appDelegate.currentCartId];
+        NSString* subTotalResult = [NSString stringWithContentsOfURL:[NSURL URLWithString:subTotalString] encoding:NSUTF8StringEncoding error:nil];
+        subTotalResult = [subTotalResult stringByReplacingOccurrencesOfString:@"\"" withString:@""];
+        
+        NSLog(@"subTotalResult: %@", subTotalResult);
+        
+        float subTotalFloat = [subTotalResult floatValue];
+        
+        subTotalFloat = subTotalFloat / 100;
+        
+        subTotalResult = [NSString stringWithFormat:@"%.2f", subTotalFloat];
+        
+        appDelegate.subTotal = subTotalResult;
+        
+        subTotalLabel.text = [[NSString alloc] initWithFormat:@"Subtotal: $%@", subTotalResult];
+        
         [cartTable reloadData];
         [cartTable setEditing:NO animated:YES];
     }
