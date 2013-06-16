@@ -137,6 +137,8 @@
 		0A1C5907176D5D9600B0A27D /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		0A1C5909176D5D9E00B0A27D /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		0AF0F13A176D4BAC008EDA04 /* RedLaser_License.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = RedLaser_License.xml; sourceTree = "<group>"; };
+		B764D328176DAE2700CFC152 /* Item.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
+		B764D329176DAE2700CFC152 /* Item.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,6 +243,8 @@
 				0A0E7064176D2EBB00D9D5C2 /* SecondViewController.m */,
 				0A0E7066176D2EBB00D9D5C2 /* Images.xcassets */,
 				0A0E7052176D2EBB00D9D5C2 /* Supporting Files */,
+				B764D328176DAE2700CFC152 /* Item.h */,
+				B764D329176DAE2700CFC152 /* Item.m */,
 			);
 			path = Checkout;
 			sourceTree = "<group>";
