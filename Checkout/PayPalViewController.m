@@ -67,7 +67,16 @@
     
 }
 
-- (void)veriftyCompletedPayment:(PayPalPayment *)completedPayment {
+- (void) payPalPaymentDidComplete:(PayPalPayment *)completedPayment {
+    //Successful payment. Send to server for verification and fulfillment
+    [self verifyCompletedPayment:completedPayment];
+    
+    //Dismiss PayPalPaymentViewController
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+- (void)verifyCompletedPayment:(PayPalPayment *)completedPayment {
     //send entire confirmation dictionary
     NSData *confirmation = [NSJSONSerialization dataWithJSONObject:completedPayment.confirmation options:0 error:nil];
     
