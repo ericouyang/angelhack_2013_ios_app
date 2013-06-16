@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RedLaserSDK.h"
 
-@interface SecondViewController : UIViewController
+@interface SecondViewController : UIViewController {
+
+    IBOutlet UIButton *scan;
+
+}
+
+@property (nonatomic, retain) UIButton *scan;
+
+-(IBAction) scanBtn;
 
 @end

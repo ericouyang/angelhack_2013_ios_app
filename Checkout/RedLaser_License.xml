@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>-NOTICE-</key>
+	<string>THIS FILE IS DIGITALLY SIGNED. DO NOT MODIFY.</string>
+	<key>Company Name</key>
+	<string>ksong12@gmail.com</string>
+	<key>iOS</key>
+	<dict>
+		<key>App Bundle IDs</key>
+		<array>
+			<string>com.ksong.Checkout</string>
+			<string>Checkout</string>
+		</array>
+	</dict>
+	
+	
+</dict>
+</plist>
+-----BEGIN SIGNATURE-----
+Dlg/v7gITA0ZIJkqpc6bcPP2TU5bCIeeWve71MIRj6VtZAvlr+rRiA8jK38/s2y4
+6dSCFwr3e6yWS1MgQXB07UlTyXjpCVbs7S3IGk4e1FUIo6h6S/KW9pzuVIS4nJTJ
+y4PsxboY+28YDp4o+E0e9QitoBQq1ErKlimV1CZBRdoZN+rziRYMVWw8KClfdoL8
+isy+i/aWYvKLH3osaSHB2UhM4QMDiW0Vx2Sf41teaowSt46LSvBsZomNXm3198OS
+EAn4R3lx9oSLYy1wBt0azL1R/l6YFsQmhj7kGiVvyumlWt/YpHAloYOQRaPi5dRR
+SkWJdPez7on5L7ogHo2e/AE+qzY3i8LYGt8mjzrRRYk3h3WIb814SuqZ4V9ryS0D
+/a1gcwkBjfDXlmdTxMdCZKYuJGLa07s7/x1z2LNTXrZwmCNPApAtrK2EPmf2B37D
+XZVvfE4b5h4nREhgnsKTzPx7/NDHWw4LY53oMZbZ3hn6oqtx6Eh3+XY5ftTmQkyE
+gz84ydiNlLXwgr06pOvQyQT2wudGR3v9g2hzj22NX3Ee9M+NWe8T2oM57+WzPlRm
+xSsCn/CxnYvsebYdMtyUFQWvWtIZCJKFiXCuELF9YOH28YRWIDgC7c3oykncj6Hh
+LqDMAxyDLJx4TN99N3GNSpoONDGOPy8MPRvycaDVJjI=
+-----END SIGNATURE-----

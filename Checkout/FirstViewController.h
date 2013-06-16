@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
+@interface FirstViewController : UIViewController <UITableViewDataSource, UITableViewDelegate> {
+    
+    IBOutlet UITableView *cartTable;
+
+}
+
+@property (nonatomic, retain) UITableView *cartTable;
+
 
 @end
