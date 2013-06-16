@@ -57,6 +57,7 @@
 		0A1C5906176D5CBC00B0A27D /* libPayPalMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A1C5902176D5CBC00B0A27D /* libPayPalMobile.a */; };
 		0A1C5908176D5D9600B0A27D /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A1C5907176D5D9600B0A27D /* libxml2.dylib */; };
 		0A1C590A176D5D9E00B0A27D /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A1C5909176D5D9E00B0A27D /* MessageUI.framework */; };
+		0AD3AB41176DB7BF0005B28F /* PayPalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD3AB40176DB7BF0005B28F /* PayPalViewController.m */; };
 		0AF0F13B176D4BAC008EDA04 /* RedLaser_License.xml in Resources */ = {isa = PBXBuildFile; fileRef = 0AF0F13A176D4BAC008EDA04 /* RedLaser_License.xml */; };
 /* End PBXBuildFile section */
 
@@ -136,6 +137,8 @@
 		0A1C5905176D5CBC00B0A27D /* PayPalPaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalPaymentViewController.h; sourceTree = "<group>"; };
 		0A1C5907176D5D9600B0A27D /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		0A1C5909176D5D9E00B0A27D /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		0AD3AB3F176DB7BF0005B28F /* PayPalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalViewController.h; sourceTree = "<group>"; };
+		0AD3AB40176DB7BF0005B28F /* PayPalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayPalViewController.m; sourceTree = "<group>"; };
 		0AF0F13A176D4BAC008EDA04 /* RedLaser_License.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = RedLaser_License.xml; sourceTree = "<group>"; };
 		B764D328176DAE2700CFC152 /* Item.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
 		B764D329176DAE2700CFC152 /* Item.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
@@ -241,6 +244,8 @@
 				0A0E7061176D2EBB00D9D5C2 /* FirstViewController.m */,
 				0A0E7063176D2EBB00D9D5C2 /* SecondViewController.h */,
 				0A0E7064176D2EBB00D9D5C2 /* SecondViewController.m */,
+				0AD3AB3F176DB7BF0005B28F /* PayPalViewController.h */,
+				0AD3AB40176DB7BF0005B28F /* PayPalViewController.m */,
 				0A0E7066176D2EBB00D9D5C2 /* Images.xcassets */,
 				0A0E7052176D2EBB00D9D5C2 /* Supporting Files */,
 				B764D328176DAE2700CFC152 /* Item.h */,
@@ -440,6 +445,7 @@
 				0A0E705C176D2EBB00D9D5C2 /* AppDelegate.m in Sources */,
 				0A0E7062176D2EBB00D9D5C2 /* FirstViewController.m in Sources */,
 				0A0E7058176D2EBB00D9D5C2 /* main.m in Sources */,
+				0AD3AB41176DB7BF0005B28F /* PayPalViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
