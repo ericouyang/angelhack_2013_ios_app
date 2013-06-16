@@ -10,6 +10,7 @@
 #import "AppDelegate.h"
 #import "Item.h"
 #import "iToast.h"
+#import "RedLaserOverlayViewController.h"
 
 @interface SecondViewController ()
 
@@ -89,7 +90,8 @@ NSString * itemId;
     
     BarcodePickerController *picker = [[BarcodePickerController alloc] init];
     // Let's keep things simple by using the default built-in overlay
-    //[picker setOverlay:customOverlay];
+    [picker setOverlay:[[RedLaserOverlayViewController alloc] init]];
+    
     [picker setDelegate:self];
     picker.orientation = UIImageOrientationUp;
     [[UIApplication sharedApplication] setStatusBarHidden:YES];
