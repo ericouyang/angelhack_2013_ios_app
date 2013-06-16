@@ -7,6 +7,7 @@
 //
 
 #import "FirstViewController.h"
+#import "AppDelegate.h"
 
 @interface FirstViewController ()
 
@@ -26,7 +27,7 @@ NSArray *items = NULL;
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    items = [[NSArray alloc] initWithObjects:@"Item No. 1", @"Item No. 2", @"Item No. 3", @"Item No. 4", @"Item No. 5", @"Item No. 6", nil];
+    //items = [[NSArray alloc] initWithObjects:@"Item No. 1", @"Item No. 2", @"Item No. 3", @"Item No. 4", @"Item No. 5", @"Item No. 6", nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -46,12 +47,20 @@ NSArray *items = NULL;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+
+    
     // Return the number of rows in the section.
     // Usually the number of items in your array (the one that holds your list)
-    return [items count];
+    return [appDelegate.currentCart count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+
+    
     //Where we configure the cell in each row
     
     static NSString *CellIdentifier = @"Cell";
@@ -62,7 +71,7 @@ NSArray *items = NULL;
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     // Configure the cell... setting the text of our cell's label
-    cell.textLabel.text = [items objectAtIndex:indexPath.row];
+    cell.textLabel.text = [appDelegate.currentCart objectAtIndex:indexPath.row];
     return cell;
 }
 

@@ -26,6 +26,7 @@ NSString * currentCartId = nil;
         currentCart = [[NSMutableArray alloc] initWithCapacity:10];
         
         currentCartId = [NSString stringWithContentsOfURL:[NSURL URLWithString:@"http://simpligro.com/api/transaction_create.json?user_id=3"] encoding:NSUTF8StringEncoding error:nil];
+        currentCartId = [currentCartId stringByReplacingOccurrencesOfString:@"\"" withString:@""];
         NSLog(@"%@", currentCartId);
     }
     

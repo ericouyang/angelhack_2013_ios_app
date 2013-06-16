@@ -109,10 +109,10 @@ NSString * itemId;
         
         [appDelegate.currentCart addObject:itemId];
         
-        [appDelegate.currentCartId];
-        //NSString *postString = [[NSString alloc] initWithFormat:@"http://simpligro.com/api/transaction_add_item.json?transaction_id=%@&item_id=%@", [appDelegate.currentCartId],itemId];
+        NSString *postString = [[NSString alloc] initWithFormat:@"http://simpligro.com/api/transaction_add_item.json?transaction_id=%@&item_id=%@", appDelegate.currentCartId,itemId];
         
-        [NSString stringWithContentsOfURL:[NSURL URLWithString:postString] encoding:NSUTF8StringEncoding error:nil];
+        NSLog(@"%@", postString);
+        NSLog(@"%@", [NSString stringWithContentsOfURL:[NSURL URLWithString:postString] encoding:NSUTF8StringEncoding error:nil]);
         
     }
 }
