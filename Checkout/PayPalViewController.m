@@ -19,6 +19,8 @@
 @synthesize taxLabel;
 @synthesize totalLabel;
 
+NSString* totalAmount = nil;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -40,13 +42,15 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)payBtn{
+- (IBAction)payBtn {
  
     //Create a PayPal Payment
     PayPalPayment *payment = [[PayPalPayment alloc] init];
-    payment.amount = [[NSDecimalNumber alloc] initWithString:@""]; //TODO: GET COST
+    payment.amount = [[NSDecimalNumber alloc] initWithString:totalAmount]; //TODO: GET COST
     payment.currencyCode = @"USD";
-    payment.shortDescription = @""; //TODO: GET DESCRIPTION
+    payment.shortDescription = @"Brogrammers' Beverage Shoppe"; //TODO: GET DESCRIPTION
+    
+    NSLog(@"%@", payment.amount);
     
     //Check whether payment is processable
     if (!payment.processable ) {
@@ -54,15 +58,15 @@
     }
     
     //Test Enviornment. Comment o
-    //[PayPalPaymentViewController setEnvironment:PayPalEnvironmentNoNetwork];
+    [PayPalPaymentViewController setEnvironment:PayPalEnvironmentNoNetwork];
     
     //unique identifier of user
     NSString *aPayerId = nil; //TODO: Get user email (or other identifier)
     
     //Create PaypalPaymentViewController w/ credentials and payerId, PayPal Payment, PayPalPaymentDelegate to handle results
     PayPalPaymentViewController *paymentViewController;
-    paymentViewController = [[PayPalPaymentViewController alloc] initWithClientId:@"AZdK3xCjLiXo-P0eig2OV2BtYAUFs0vms67mKwNpx46SoS3jMpEBv3mlR-sg"/*ADD CLIENT ID*/
-                                                                    receiverEmail:@"ericouyang@gmail.com"/*Client's Paypal Email*/
+    paymentViewController = [[PayPalPaymentViewController alloc] initWithClientId:@"AX5T5hBzmiu-kkfe-tkBxRkdtIN0zG3CTqXsB3WxD3NDeNkZtOXTdHE2Xm-H"
+                                                                    receiverEmail:@"ericouyang@gmail.com"
                                                                           payerId:aPayerId
                                                                           payment:payment
                                                                          delegate:self];
@@ -110,10 +114,11 @@
     taxLabel.text = [[NSString alloc] initWithFormat:@"$%.2f", tax];
     totalLabel.text = [[NSString alloc] initWithFormat:@"$%.2f", total];
 
+    totalAmount = [[NSString alloc] initWithFormat:@"%.2f", total];
     
     //start w/ test environemnt. COMMENT OUT BELOW to switch to live
     [PayPalPaymentViewController setEnvironment:PayPalEnvironmentNoNetwork];
-    [PayPalPaymentViewController prepareForPaymentUsingClientId: @""];//TODO: ADD CLIENT ID
+    [PayPalPaymentViewController prepareForPaymentUsingClientId: @"AX5T5hBzmiu-kkfe-tkBxRkdtIN0zG3CTqXsB3WxD3NDeNkZtOXTdHE2Xm-H"];//TODO: ADD CLIENT ID
 }
 
 
