@@ -66,6 +66,8 @@
 		B7DF06F8176DDB3E00C7FBAF /* iToast.m in Sources */ = {isa = PBXBuildFile; fileRef = B7DF06F7176DDB3E00C7FBAF /* iToast.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		B7DF06FB176DE29B00C7FBAF /* CheckInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7DF06FA176DE29B00C7FBAF /* CheckInViewController.m */; };
 		B7DF06FE176DE48800C7FBAF /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7DF06FD176DE48800C7FBAF /* LoginViewController.m */; };
+		B7DF0701176E1FFC00C7FBAF /* ThankYouViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7DF0700176E1FFC00C7FBAF /* ThankYouViewController.m */; };
+		B7DF0703176E262F00C7FBAF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B7DF0702176E262F00C7FBAF /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -158,6 +160,9 @@
 		B7DF06FA176DE29B00C7FBAF /* CheckInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckInViewController.m; sourceTree = "<group>"; };
 		B7DF06FC176DE48800C7FBAF /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		B7DF06FD176DE48800C7FBAF /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		B7DF06FF176E1FFC00C7FBAF /* ThankYouViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThankYouViewController.h; sourceTree = "<group>"; };
+		B7DF0700176E1FFC00C7FBAF /* ThankYouViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThankYouViewController.m; sourceTree = "<group>"; };
+		B7DF0702176E262F00C7FBAF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +257,7 @@
 		0A0E7051176D2EBB00D9D5C2 /* Checkout */ = {
 			isa = PBXGroup;
 			children = (
+				B7DF0702176E262F00C7FBAF /* Default-568h@2x.png */,
 				B7DF06F6176DDB3E00C7FBAF /* iToast.h */,
 				B7DF06F7176DDB3E00C7FBAF /* iToast.m */,
 				B7DF06F4176DD28F00C7FBAF /* AppIcon@120.png */,
@@ -275,6 +281,8 @@
 				B764D329176DAE2700CFC152 /* Item.m */,
 				B7DF06FC176DE48800C7FBAF /* LoginViewController.h */,
 				B7DF06FD176DE48800C7FBAF /* LoginViewController.m */,
+				B7DF06FF176E1FFC00C7FBAF /* ThankYouViewController.h */,
+				B7DF0700176E1FFC00C7FBAF /* ThankYouViewController.m */,
 			);
 			path = Checkout;
 			sourceTree = "<group>";
@@ -446,6 +454,7 @@
 				0A0E70C1176D3C9F00D9D5C2 /* flashlight-turn-off-icon.png in Resources */,
 				0A0E70C4176D3C9F00D9D5C2 /* flashlight-turn-on-icon-pressed@2x.png in Resources */,
 				0A0E70C3176D3C9F00D9D5C2 /* flashlight-turn-on-icon-pressed.png in Resources */,
+				B7DF0703176E262F00C7FBAF /* Default-568h@2x.png in Resources */,
 				0A0E70C8176D3C9F00D9D5C2 /* LICENSE-2.0.txt in Resources */,
 				0A0E70C0176D3C9F00D9D5C2 /* flashlight-turn-off-icon-pressed@2x.png in Resources */,
 				0A0E70CA176D3C9F00D9D5C2 /* poweredby@2x.png in Resources */,
@@ -470,6 +479,7 @@
 			files = (
 				B74FA8C7176DBB6100ECF389 /* Item.m in Sources */,
 				0A0E70BE176D3C9F00D9D5C2 /* empty.cpp in Sources */,
+				B7DF0701176E1FFC00C7FBAF /* ThankYouViewController.m in Sources */,
 				0A0E7065176D2EBB00D9D5C2 /* SecondViewController.m in Sources */,
 				0A0E705C176D2EBB00D9D5C2 /* AppDelegate.m in Sources */,
 				B7DF06FE176DE48800C7FBAF /* LoginViewController.m in Sources */,
@@ -607,7 +617,6 @@
 		0A0E707E176D2EBB00D9D5C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LIBRARY = "libstdc++";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -633,7 +642,6 @@
 		0A0E707F176D2EBB00D9D5C2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LIBRARY = "libstdc++";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

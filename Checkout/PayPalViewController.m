@@ -8,6 +8,8 @@
 
 #import "PayPalViewController.h"
 #import "AppDelegate.h"
+#import "iToast.h"
+#import "ThankYouViewController.h"
 
 @interface PayPalViewController ()
 
@@ -44,6 +46,13 @@ NSString* totalAmount = nil;
 
 - (IBAction)payBtn {
  
+    if ([totalAmount isEqualToString:@"0.00"])
+    {
+        [[[[iToast makeText:NSLocalizedString(@"Your cart is empty", @"")]
+           setGravity:iToastGravityBottom] setDuration:iToastDurationShort] show];
+    }
+    else
+    {
     //Create a PayPal Payment
     PayPalPayment *payment = [[PayPalPayment alloc] init];
     payment.amount = [[NSDecimalNumber alloc] initWithString:totalAmount]; //TODO: GET COST
@@ -73,6 +82,7 @@ NSString* totalAmount = nil;
     
     //present PayPalPaymentViewController
     [self presentViewController: paymentViewController animated:YES completion: nil];
+    }
     
 }
 
@@ -81,12 +91,21 @@ NSString* totalAmount = nil;
     [self verifyCompletedPayment:completedPayment];
     
     //Dismiss PayPalPaymentViewController
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:YES completion:^{
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    ThankYouViewController *myVC = (ThankYouViewController *)[storyboard instantiateViewControllerWithIdentifier:@"ThankYouView"];
+    
+    [self presentModalViewController:myVC animated:YES];
+    }];
 }
 
 - (void)payPalPaymentDidCancel {
     // The payment was canceled; dismiss the PayPalPaymentViewController.
     [self dismissViewControllerAnimated:YES completion:nil];
+    
+    [[[[iToast makeText:NSLocalizedString(@"Payment Canceled", @"")]
+       setGravity:iToastGravityBottom] setDuration:iToastDurationShort] show];
 }
 
 
