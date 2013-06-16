@@ -8,6 +8,7 @@
 
 #import "SecondViewController.h"
 #import "AppDelegate.h"
+#import "Item.h"
 
 @interface SecondViewController ()
 
@@ -107,7 +108,7 @@ NSString * itemId;
         
         AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
         
-        [appDelegate.currentCart addObject:itemId];
+        [appDelegate.currentCart addObject: [Item allocWithItemId:itemId withName:itemName withDescription:itemDescription withPrice:itemPrice]];
         
         NSString *postString = [[NSString alloc] initWithFormat:@"http://simpligro.com/api/transaction_add_item.json?transaction_id=%@&item_id=%@", appDelegate.currentCartId,itemId];
         

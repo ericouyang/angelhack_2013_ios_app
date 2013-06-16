@@ -8,6 +8,7 @@
 
 #import "FirstViewController.h"
 #import "AppDelegate.h"
+#import "Item.h"
 
 @interface FirstViewController ()
 
@@ -79,7 +80,8 @@ NSArray *items = NULL;
     // Configure the cell... setting the text of our cell's label
     NSLog(@"Object: %@", [appDelegate.currentCart objectAtIndex:indexPath.row]);
     
-    
+    Item* currentItem = [appDelegate.currentCart objectAtIndex:indexPath.row];
+    /*
     NSString *requestString = [NSString stringWithFormat:@"http://simpligro.com/api/item.json?id=%@", [appDelegate.currentCart objectAtIndex:indexPath.row]];
     
     //NSLog(requestString);
@@ -101,11 +103,11 @@ NSArray *items = NULL;
     cost = cost / 100;
     
     NSString *itemPrice = [NSString stringWithFormat:@"$%.2f", cost];
-    
+    */
 
     
-    cell.textLabel.text = itemName;
-    cell.detailTextLabel.text = itemPrice;
+    cell.textLabel.text = currentItem.name;
+    cell.detailTextLabel.text = currentItem.price;
     return cell;
 }
 
