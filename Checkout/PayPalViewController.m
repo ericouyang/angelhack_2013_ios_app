@@ -98,6 +98,12 @@ NSString* totalAmount = nil;
     
     [self presentModalViewController:myVC animated:YES];
     }];
+    
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+
+    appDelegate.currentCart = nil;
+    appDelegate.currentCartId = nil;
+    appDelegate.subTotal = nil;
 }
 
 - (void)payPalPaymentDidCancel {
