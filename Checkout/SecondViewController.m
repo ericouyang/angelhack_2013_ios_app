@@ -7,13 +7,19 @@
 //
 
 #import "SecondViewController.h"
-
+#import "AppDelegate.h"
 
 @interface SecondViewController ()
 
 @end
 
 @implementation SecondViewController
+
+NSString * itemName;
+NSString * itemPrice;
+NSString * itemDescription;
+NSString * itemId;
+
 
 - (void)viewDidLoad
 {
@@ -44,17 +50,37 @@
     
     //NSLog(@"%@", [[results anyObject] barcodeString]);
 
-    NSString *requestString = [NSString stringWithFormat:@"http://simpligro.com/api/item.json?upc=%@", [[[results anyObject]barcodeString] substringFromIndex:1]];
+    NSString *requestString = [NSString stringWithFormat:@"http://simpligro.com/api/item.json?upc=%@", [[results anyObject] barcodeString]];
     
-    //NSLog(requestString);
+    NSLog(requestString);
     
     NSString *jsonString = [NSString stringWithContentsOfURL:[NSURL URLWithString:requestString] encoding:NSUTF8StringEncoding error:nil];
     
     NSLog(@"%@", jsonString);
     
+    NSError *e = nil;
+    NSData *data = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+    NSDictionary *JSON = [NSJSONSerialization JSONObjectWithData: data options: NSJSONReadingMutableContainers error: &e];
     
+    NSLog(@"%@", data);
     
+    itemName = [JSON objectForKey:@"name"];
+    itemDescription = [JSON objectForKey:@"description"];
+    itemId = [JSON objectForKey:@"id"];
+    NSString *itemPriceString = [JSON objectForKey:@"cost"];
+    float cost = [itemPriceString floatValue];
     
+    cost = cost / 100;
+    
+    itemPrice = [NSString stringWithFormat:@"$%.2f", cost];
+    
+    NSLog(@"%@", itemName);
+    NSLog(@"%@", itemPrice);
+    
+    NSString *description = [NSString stringWithFormat:@"You've scanned %@.\nCost: %@", itemDescription, itemPrice];
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle: itemName message: description delegate: self cancelButtonTitle:@"Close" otherButtonTitles:@"Add to Cart", nil];
+    [alert show];
 }
 
 - (IBAction)scanBtn {
@@ -68,6 +94,27 @@
     [self presentModalViewController:picker animated:TRUE];
     //[picker release];
 
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 0) {
+        
+        NSLog(@"user pressed Close");
+        
+    } else {
+        
+        NSLog(@"User pressed Add to Cart");
+        
+        AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+        
+        [appDelegate.currentCart addObject:itemId];
+        
+        [appDelegate.currentCartId];
+        //NSString *postString = [[NSString alloc] initWithFormat:@"http://simpligro.com/api/transaction_add_item.json?transaction_id=%@&item_id=%@", [appDelegate.currentCartId],itemId];
+        
+        [NSString stringWithContentsOfURL:[NSURL URLWithString:postString] encoding:NSUTF8StringEncoding error:nil];
+        
+    }
 }
 
 @end

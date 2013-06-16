@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "RedLaserSDK.h"
 
-@interface SecondViewController : UIViewController {
+@interface SecondViewController : UIViewController <UIAlertViewDelegate> {
 
     IBOutlet UIButton *scan;
 
