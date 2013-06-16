@@ -35,7 +35,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)pay{
+- (IBAction)payBtn{
  
     //Create a PayPal Payment
     PayPalPayment *payment = [[PayPalPayment alloc] init];
