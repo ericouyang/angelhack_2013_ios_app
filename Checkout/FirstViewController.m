@@ -75,7 +75,7 @@ NSArray *items = NULL;
     
     cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
     }
     // Configure the cell... setting the text of our cell's label
     NSLog(@"Object: %@", [appDelegate.currentCart objectAtIndex:indexPath.row]);
@@ -139,14 +139,6 @@ NSArray *items = NULL;
  }
  */
 
-/*
- // Override to support conditional rearranging of the table view.
- - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
- {
- // Return NO if you do not want the item to be re-orderable.
- return YES;
- }
- */
 
 #pragma mark - Table view delegate
 
@@ -160,6 +152,36 @@ NSArray *items = NULL;
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+}
+
+// Override to support conditional editing of the table view.
+// This only needs to be implemented if you are going to be returning NO
+// for some items. By default, all items are editable.
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    // Return YES if you want the specified item to be editable.
+    return YES;
+}
+
+// Override to support editing the table view.
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        //add code here for when you hit delete
+        AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+        
+        NSString *postString = [[NSString alloc] initWithFormat:@"http://simpligro.com/api/transaction_item_delete.json?id=%@", ((Item*)[appDelegate.currentCart objectAtIndex:indexPath.row]).transactionItemId];
+        
+        NSLog(@"%@", postString);
+        
+        NSString* postResult = [NSString stringWithContentsOfURL:[NSURL URLWithString:postString] encoding:NSUTF8StringEncoding error:nil];
+    
+        NSLog(@"%@", postResult);
+        
+        [appDelegate.currentCart removeObject:[appDelegate.currentCart objectAtIndex:indexPath.row]];
+        
+        NSLog(@"%@",@"Deleted");
+        
+        [cartTable reloadData];
+    }
 }
 
 @end

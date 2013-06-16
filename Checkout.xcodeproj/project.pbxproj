@@ -59,6 +59,7 @@
 		0A1C590A176D5D9E00B0A27D /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A1C5909176D5D9E00B0A27D /* MessageUI.framework */; };
 		0AD3AB41176DB7BF0005B28F /* PayPalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD3AB40176DB7BF0005B28F /* PayPalViewController.m */; };
 		0AF0F13B176D4BAC008EDA04 /* RedLaser_License.xml in Resources */ = {isa = PBXBuildFile; fileRef = 0AF0F13A176D4BAC008EDA04 /* RedLaser_License.xml */; };
+		B74FA8C7176DBB6100ECF389 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = B764D329176DAE2700CFC152 /* Item.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -440,6 +441,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B74FA8C7176DBB6100ECF389 /* Item.m in Sources */,
 				0A0E70BE176D3C9F00D9D5C2 /* empty.cpp in Sources */,
 				0A0E7065176D2EBB00D9D5C2 /* SecondViewController.m in Sources */,
 				0A0E705C176D2EBB00D9D5C2 /* AppDelegate.m in Sources */,

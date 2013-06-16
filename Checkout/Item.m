@@ -10,13 +10,19 @@
 
 @implementation Item
 
-@synthesize itemId, name, description, price;
+@synthesize itemId;
+@synthesize name;
+@synthesize description;
+@synthesize price;
+@synthesize transactionItemId;
 
-+allocWithItemId: (NSString*)itemId withName:(NSString*)name withDescription:(NSString*)description withPrice:(NSString*)price {
-    self.itemId         = itemId;
-    self.name           = name;
-    self.description    = description;
-    self.price          = price;
+-(Item*)initWithItemId: (NSString*)itemId1 withTransactionItemId:(NSString*)transactionItemId1 withName:(NSString*)name1 withDescription:(NSString*)description1 withPrice:(NSString*)price1 {
+    itemId         = itemId1;
+    transactionItemId = transactionItemId1;
+    name           = name1;
+    description    = description1;
+    price          = price1;
+    return self;
 }
 
 @end

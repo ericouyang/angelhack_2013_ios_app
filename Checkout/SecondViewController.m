@@ -108,14 +108,19 @@ NSString * itemId;
         
         AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
         
-        [appDelegate.currentCart addObject: [Item allocWithItemId:itemId withName:itemName withDescription:itemDescription withPrice:itemPrice]];
-        
-        NSString *postString = [[NSString alloc] initWithFormat:@"http://simpligro.com/api/transaction_add_item.json?transaction_id=%@&item_id=%@", appDelegate.currentCartId,itemId];
+        NSString *postString = [[NSString alloc] initWithFormat:@"http://simpligro.com/api/transaction_item_add.json?transaction_id=%@&item_id=%@", appDelegate.currentCartId,itemId];
         
         NSLog(@"%@", postString);
-        NSLog(@"%@", [NSString stringWithContentsOfURL:[NSURL URLWithString:postString] encoding:NSUTF8StringEncoding error:nil]);
+        
+        NSString* postResult = [NSString stringWithContentsOfURL:[NSURL URLWithString:postString] encoding:NSUTF8StringEncoding error:nil];
         
         NSLog(@"%@", appDelegate.currentCart);
+        
+        NSString *transactionItemId = [postResult stringByReplacingOccurrencesOfString:@"\"" withString:@""];
+        
+        NSLog(@"%@", transactionItemId);
+        
+        [appDelegate.currentCart addObject: [[Item alloc] initWithItemId:itemId withTransactionItemId:transactionItemId withName:itemName withDescription:itemDescription withPrice:itemPrice]];
     }
 }
 
