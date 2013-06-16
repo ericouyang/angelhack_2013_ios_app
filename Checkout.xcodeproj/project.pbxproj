@@ -68,6 +68,7 @@
 		B7DF06FE176DE48800C7FBAF /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7DF06FD176DE48800C7FBAF /* LoginViewController.m */; };
 		B7DF0701176E1FFC00C7FBAF /* ThankYouViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7DF0700176E1FFC00C7FBAF /* ThankYouViewController.m */; };
 		B7DF0703176E262F00C7FBAF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B7DF0702176E262F00C7FBAF /* Default-568h@2x.png */; };
+		B7DF0706176E2C4A00C7FBAF /* RedLaserOverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7DF0705176E2C4A00C7FBAF /* RedLaserOverlayViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -163,6 +164,8 @@
 		B7DF06FF176E1FFC00C7FBAF /* ThankYouViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThankYouViewController.h; sourceTree = "<group>"; };
 		B7DF0700176E1FFC00C7FBAF /* ThankYouViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThankYouViewController.m; sourceTree = "<group>"; };
 		B7DF0702176E262F00C7FBAF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		B7DF0704176E2C4A00C7FBAF /* RedLaserOverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedLaserOverlayViewController.h; sourceTree = "<group>"; };
+		B7DF0705176E2C4A00C7FBAF /* RedLaserOverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedLaserOverlayViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -283,6 +286,8 @@
 				B7DF06FD176DE48800C7FBAF /* LoginViewController.m */,
 				B7DF06FF176E1FFC00C7FBAF /* ThankYouViewController.h */,
 				B7DF0700176E1FFC00C7FBAF /* ThankYouViewController.m */,
+				B7DF0704176E2C4A00C7FBAF /* RedLaserOverlayViewController.h */,
+				B7DF0705176E2C4A00C7FBAF /* RedLaserOverlayViewController.m */,
 			);
 			path = Checkout;
 			sourceTree = "<group>";
@@ -482,6 +487,7 @@
 				B7DF0701176E1FFC00C7FBAF /* ThankYouViewController.m in Sources */,
 				0A0E7065176D2EBB00D9D5C2 /* SecondViewController.m in Sources */,
 				0A0E705C176D2EBB00D9D5C2 /* AppDelegate.m in Sources */,
+				B7DF0706176E2C4A00C7FBAF /* RedLaserOverlayViewController.m in Sources */,
 				B7DF06FE176DE48800C7FBAF /* LoginViewController.m in Sources */,
 				B7DF06FB176DE29B00C7FBAF /* CheckInViewController.m in Sources */,
 				0A0E7062176D2EBB00D9D5C2 /* FirstViewController.m in Sources */,
