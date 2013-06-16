@@ -114,6 +114,7 @@ NSString * itemId;
         NSLog(@"%@", postString);
         NSLog(@"%@", [NSString stringWithContentsOfURL:[NSURL URLWithString:postString] encoding:NSUTF8StringEncoding error:nil]);
         
+        NSLog(@"%@", appDelegate.currentCart);
     }
 }
 

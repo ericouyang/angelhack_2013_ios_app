@@ -36,6 +36,12 @@ NSArray *items = NULL;
     // Dispose of any resources that can be recreated.
 }
 
+- (void) viewWillAppear:(BOOL)animated
+{
+    
+    [cartTable reloadData];
+    
+}
 
 
 
@@ -68,10 +74,38 @@ NSArray *items = NULL;
     
     cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     // Configure the cell... setting the text of our cell's label
-    cell.textLabel.text = [appDelegate.currentCart objectAtIndex:indexPath.row];
+    NSLog(@"Object: %@", [appDelegate.currentCart objectAtIndex:indexPath.row]);
+    
+    
+    NSString *requestString = [NSString stringWithFormat:@"http://simpligro.com/api/item.json?id=%@", [appDelegate.currentCart objectAtIndex:indexPath.row]];
+    
+    //NSLog(requestString);
+    
+    NSString *jsonString = [NSString stringWithContentsOfURL:[NSURL URLWithString:requestString] encoding:NSUTF8StringEncoding error:nil];
+    
+    //NSLog(@"%@", jsonString);
+    
+    NSError *e = nil;
+    NSData *data = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+    NSDictionary *JSON = [NSJSONSerialization JSONObjectWithData: data options: NSJSONReadingMutableContainers error: &e];
+    
+    //NSLog(@"%@", data);
+    
+    NSString *itemName = [JSON objectForKey:@"name"];
+    NSString *itemPriceString = [JSON objectForKey:@"cost"];
+    float cost = [itemPriceString floatValue];
+    
+    cost = cost / 100;
+    
+    NSString *itemPrice = [NSString stringWithFormat:@"$%.2f", cost];
+    
+
+    
+    cell.textLabel.text = itemName;
+    cell.detailTextLabel.text = itemPrice;
     return cell;
 }
 
