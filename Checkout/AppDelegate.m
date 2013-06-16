@@ -12,10 +12,11 @@
 
 @synthesize currentCart;
 @synthesize currentCartId;
+@synthesize subTotal;
 
 NSMutableArray * currentCart = nil;
 NSString * currentCartId = nil;
-
+NSString * subTotal = nil;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -28,6 +29,8 @@ NSString * currentCartId = nil;
         currentCartId = [NSString stringWithContentsOfURL:[NSURL URLWithString:@"http://simpligro.com/api/transaction_create.json?user_id=3"] encoding:NSUTF8StringEncoding error:nil];
         currentCartId = [currentCartId stringByReplacingOccurrencesOfString:@"\"" withString:@""];
         NSLog(@"%@", currentCartId);
+        
+        subTotal = @"0.00";
     }
     
     return YES;

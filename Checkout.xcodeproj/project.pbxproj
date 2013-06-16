@@ -59,6 +59,9 @@
 		0A1C590A176D5D9E00B0A27D /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A1C5909176D5D9E00B0A27D /* MessageUI.framework */; };
 		0AF0F13B176D4BAC008EDA04 /* RedLaser_License.xml in Resources */ = {isa = PBXBuildFile; fileRef = 0AF0F13A176D4BAC008EDA04 /* RedLaser_License.xml */; };
 		B74FA8C7176DBB6100ECF389 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = B764D329176DAE2700CFC152 /* Item.m */; };
+		B7DF06F2176DD27300C7FBAF /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B7DF06F0176DD27300C7FBAF /* Icon@2x.png */; };
+		B7DF06F3176DD27300C7FBAF /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B7DF06F1176DD27300C7FBAF /* Icon.png */; };
+		B7DF06F5176DD28F00C7FBAF /* AppIcon@120.png in Resources */ = {isa = PBXBuildFile; fileRef = B7DF06F4176DD28F00C7FBAF /* AppIcon@120.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,6 +143,9 @@
 		0AF0F13A176D4BAC008EDA04 /* RedLaser_License.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = RedLaser_License.xml; sourceTree = "<group>"; };
 		B764D328176DAE2700CFC152 /* Item.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
 		B764D329176DAE2700CFC152 /* Item.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
+		B7DF06F0176DD27300C7FBAF /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		B7DF06F1176DD27300C7FBAF /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		B7DF06F4176DD28F00C7FBAF /* AppIcon@120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon@120.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +240,9 @@
 		0A0E7051176D2EBB00D9D5C2 /* Checkout */ = {
 			isa = PBXGroup;
 			children = (
+				B7DF06F4176DD28F00C7FBAF /* AppIcon@120.png */,
+				B7DF06F0176DD27300C7FBAF /* Icon@2x.png */,
+				B7DF06F1176DD27300C7FBAF /* Icon.png */,
 				0AF0F13A176D4BAC008EDA04 /* RedLaser_License.xml */,
 				0A0E705A176D2EBB00D9D5C2 /* AppDelegate.h */,
 				0A0E705B176D2EBB00D9D5C2 /* AppDelegate.m */,
@@ -401,16 +410,19 @@
 				0A0E7067176D2EBB00D9D5C2 /* Images.xcassets in Resources */,
 				0A0E70C6176D3C9F00D9D5C2 /* flashlight-turn-on-icon@2x.png in Resources */,
 				0AF0F13B176D4BAC008EDA04 /* RedLaser_License.xml in Resources */,
+				B7DF06F2176DD27300C7FBAF /* Icon@2x.png in Resources */,
 				0A0E7056176D2EBB00D9D5C2 /* InfoPlist.strings in Resources */,
 				0A0E70C5176D3C9F00D9D5C2 /* flashlight-turn-on-icon.png in Resources */,
 				0A0E705F176D2EBB00D9D5C2 /* Main.storyboard in Resources */,
 				0A0E70BC176D3C9F00D9D5C2 /* CHANGELOG.txt in Resources */,
 				0A0E70B8176D3C9F00D9D5C2 /* camera-swap-icon-pressed.png in Resources */,
 				0A0E70BA176D3C9F00D9D5C2 /* camera-swap-icon.png in Resources */,
+				B7DF06F3176DD27300C7FBAF /* Icon.png in Resources */,
 				0A0E70BF176D3C9F00D9D5C2 /* flashlight-turn-off-icon-pressed.png in Resources */,
 				0A0E70C9176D3C9F00D9D5C2 /* poweredby.png in Resources */,
 				0A0E70BD176D3C9F00D9D5C2 /* scanditsdk.strings in Resources */,
 				0A0E70B9176D3C9F00D9D5C2 /* camera-swap-icon-pressed@2x.png in Resources */,
+				B7DF06F5176DD28F00C7FBAF /* AppIcon@120.png in Resources */,
 				0A0E70C1176D3C9F00D9D5C2 /* flashlight-turn-off-icon.png in Resources */,
 				0A0E70C4176D3C9F00D9D5C2 /* flashlight-turn-on-icon-pressed@2x.png in Resources */,
 				0A0E70C3176D3C9F00D9D5C2 /* flashlight-turn-on-icon-pressed.png in Resources */,
@@ -571,7 +583,6 @@
 		0A0E707E176D2EBB00D9D5C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LIBRARY = "libstdc++";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -598,7 +609,6 @@
 		0A0E707F176D2EBB00D9D5C2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LIBRARY = "libstdc++";
 				CODE_SIGN_IDENTITY = "iPhone Developer";

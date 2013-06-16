@@ -11,10 +11,12 @@
 @interface FirstViewController : UIViewController <UITableViewDataSource, UITableViewDelegate> {
     
     IBOutlet UITableView *cartTable;
-
+    IBOutlet UILabel *subTotalLabel;
 }
 
 @property (nonatomic, retain) UITableView *cartTable;
+
+@property (nonatomic, retain) UILabel *subTotalLabel;
 
 
 @end

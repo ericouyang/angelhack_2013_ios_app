@@ -19,6 +19,7 @@
 
 
 @synthesize cartTable;
+@synthesize subTotalLabel;
 
 NSArray *items = NULL;
 
@@ -39,9 +40,12 @@ NSArray *items = NULL;
 
 - (void) viewWillAppear:(BOOL)animated
 {
-    
     [cartTable reloadData];
+    [cartTable setEditing:NO animated:YES];
     
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+
+    subTotalLabel.text = [[NSString alloc] initWithFormat:@"Subtotal: $%@", appDelegate.subTotal];
 }
 
 
@@ -181,6 +185,7 @@ NSArray *items = NULL;
         NSLog(@"%@",@"Deleted");
         
         [cartTable reloadData];
+        [cartTable setEditing:NO animated:YES];
     }
 }
 

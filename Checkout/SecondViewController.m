@@ -121,6 +121,21 @@ NSString * itemId;
         NSLog(@"%@", transactionItemId);
         
         [appDelegate.currentCart addObject: [[Item alloc] initWithItemId:itemId withTransactionItemId:transactionItemId withName:itemName withDescription:itemDescription withPrice:itemPrice]];
+        
+        
+        NSString *subTotalString = [[NSString alloc] initWithFormat:@"http://simpligro.com/api/transaction_subtotal.json?id=%@", appDelegate.currentCartId];
+        NSString* subTotalResult = [NSString stringWithContentsOfURL:[NSURL URLWithString:subTotalString] encoding:NSUTF8StringEncoding error:nil];
+        subTotalResult = [subTotalResult stringByReplacingOccurrencesOfString:@"\"" withString:@""];
+        
+        NSLog(@"subTotalResult: %@", subTotalResult);
+        
+        float subTotalFloat = [subTotalResult floatValue];
+        
+        subTotalFloat = subTotalFloat / 100;
+        
+        subTotalResult = [NSString stringWithFormat:@"%.2f", subTotalFloat];
+        
+        appDelegate.subTotal = subTotalResult;
     }
 }
 

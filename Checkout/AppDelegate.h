@@ -13,5 +13,6 @@
 @property (strong, nonatomic) UIWindow *window;
 @property NSMutableArray *currentCart;
 @property NSString *currentCartId;
+@property NSString *subTotal;
 
 @end
