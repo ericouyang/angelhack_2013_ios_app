@@ -12,9 +12,15 @@
 @interface PayPalViewController : UIViewController<PayPalPaymentDelegate> {
     
     IBOutlet UIButton *pay;
+    IBOutlet UILabel *subTotalLabel;
+    IBOutlet UILabel *taxLabel;
+    IBOutlet UILabel *totalLabel;
 }
 
 @property(nonatomic, retain) UIButton *pay;
+@property (nonatomic, retain) UILabel *subTotalLabel;
+@property (nonatomic, retain) UILabel *taxLabel;
+@property (nonatomic, retain) UILabel *totalLabel;
 
 -(IBAction) payBtn;
 

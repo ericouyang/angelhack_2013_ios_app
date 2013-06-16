@@ -7,12 +7,17 @@
 //
 
 #import "PayPalViewController.h"
+#import "AppDelegate.h"
 
 @interface PayPalViewController ()
 
 @end
 
 @implementation PayPalViewController
+
+@synthesize subTotalLabel;
+@synthesize taxLabel;
+@synthesize totalLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -90,6 +95,21 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    subTotalLabel.text = [[NSString alloc] initWithFormat:@"$%@", appDelegate.subTotal];
+    
+    float tax = [appDelegate.subTotal floatValue];
+    tax = tax * 0.0875;
+    
+    float total = [appDelegate.subTotal floatValue];
+    total = total + tax;
+
+    
+    taxLabel.text = [[NSString alloc] initWithFormat:@"$%.2f", tax];
+    totalLabel.text = [[NSString alloc] initWithFormat:@"$%.2f", total];
+
     
     //start w/ test environemnt. COMMENT OUT BELOW to switch to live
     [PayPalPaymentViewController setEnvironment:PayPalEnvironmentNoNetwork];
