@@ -64,6 +64,8 @@
 		B7DF06F3176DD27300C7FBAF /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B7DF06F1176DD27300C7FBAF /* Icon.png */; };
 		B7DF06F5176DD28F00C7FBAF /* AppIcon@120.png in Resources */ = {isa = PBXBuildFile; fileRef = B7DF06F4176DD28F00C7FBAF /* AppIcon@120.png */; };
 		B7DF06F8176DDB3E00C7FBAF /* iToast.m in Sources */ = {isa = PBXBuildFile; fileRef = B7DF06F7176DDB3E00C7FBAF /* iToast.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B7DF06FB176DE29B00C7FBAF /* CheckInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7DF06FA176DE29B00C7FBAF /* CheckInViewController.m */; };
+		B7DF06FE176DE48800C7FBAF /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7DF06FD176DE48800C7FBAF /* LoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -152,6 +154,10 @@
 		B7DF06F4176DD28F00C7FBAF /* AppIcon@120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon@120.png"; sourceTree = "<group>"; };
 		B7DF06F6176DDB3E00C7FBAF /* iToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iToast.h; sourceTree = "<group>"; };
 		B7DF06F7176DDB3E00C7FBAF /* iToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iToast.m; sourceTree = "<group>"; };
+		B7DF06F9176DE29B00C7FBAF /* CheckInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckInViewController.h; sourceTree = "<group>"; };
+		B7DF06FA176DE29B00C7FBAF /* CheckInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckInViewController.m; sourceTree = "<group>"; };
+		B7DF06FC176DE48800C7FBAF /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		B7DF06FD176DE48800C7FBAF /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,6 +261,8 @@
 				0A0E705A176D2EBB00D9D5C2 /* AppDelegate.h */,
 				0A0E705B176D2EBB00D9D5C2 /* AppDelegate.m */,
 				0A0E705D176D2EBB00D9D5C2 /* Main.storyboard */,
+				B7DF06F9176DE29B00C7FBAF /* CheckInViewController.h */,
+				B7DF06FA176DE29B00C7FBAF /* CheckInViewController.m */,
 				0A0E7060176D2EBB00D9D5C2 /* FirstViewController.h */,
 				0A0E7061176D2EBB00D9D5C2 /* FirstViewController.m */,
 				0A0E7063176D2EBB00D9D5C2 /* SecondViewController.h */,
@@ -265,6 +273,8 @@
 				0A0E7052176D2EBB00D9D5C2 /* Supporting Files */,
 				B764D328176DAE2700CFC152 /* Item.h */,
 				B764D329176DAE2700CFC152 /* Item.m */,
+				B7DF06FC176DE48800C7FBAF /* LoginViewController.h */,
+				B7DF06FD176DE48800C7FBAF /* LoginViewController.m */,
 			);
 			path = Checkout;
 			sourceTree = "<group>";
@@ -462,6 +472,8 @@
 				0A0E70BE176D3C9F00D9D5C2 /* empty.cpp in Sources */,
 				0A0E7065176D2EBB00D9D5C2 /* SecondViewController.m in Sources */,
 				0A0E705C176D2EBB00D9D5C2 /* AppDelegate.m in Sources */,
+				B7DF06FE176DE48800C7FBAF /* LoginViewController.m in Sources */,
+				B7DF06FB176DE29B00C7FBAF /* CheckInViewController.m in Sources */,
 				0A0E7062176D2EBB00D9D5C2 /* FirstViewController.m in Sources */,
 				0A0E7058176D2EBB00D9D5C2 /* main.m in Sources */,
 				0AD3AB41176DB7BF0005B28F /* PayPalViewController.m in Sources */,
