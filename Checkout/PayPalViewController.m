@@ -49,15 +49,15 @@
     }
     
     //Test Enviornment. Comment o
-    [PayPalPaymentViewController setEnvironment:PayPalEnvironmentNoNetwork];
+    //[PayPalPaymentViewController setEnvironment:PayPalEnvironmentNoNetwork];
     
     //unique identifier of user
-    NSString *aPayerId = @"TEMPORARY"; //TODO: Get user email (or other identifier)
+    NSString *aPayerId = nil; //TODO: Get user email (or other identifier)
     
     //Create PaypalPaymentViewController w/ credentials and payerId, PayPal Payment, PayPalPaymentDelegate to handle results
     PayPalPaymentViewController *paymentViewController;
-    paymentViewController = [[PayPalPaymentViewController alloc] initWithClientId:@""/*ADD CLIENT ID*/
-                                                                    receiverEmail:@""/*Client's Paypal Email*/
+    paymentViewController = [[PayPalPaymentViewController alloc] initWithClientId:@"AZdK3xCjLiXo-P0eig2OV2BtYAUFs0vms67mKwNpx46SoS3jMpEBv3mlR-sg"/*ADD CLIENT ID*/
+                                                                    receiverEmail:@"ericouyang@gmail.com"/*Client's Paypal Email*/
                                                                           payerId:aPayerId
                                                                           payment:payment
                                                                          delegate:self];
@@ -72,6 +72,11 @@
     [self verifyCompletedPayment:completedPayment];
     
     //Dismiss PayPalPaymentViewController
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)payPalPaymentDidCancel {
+    // The payment was canceled; dismiss the PayPalPaymentViewController.
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
