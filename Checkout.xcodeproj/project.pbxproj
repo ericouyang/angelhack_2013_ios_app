@@ -63,6 +63,7 @@
 		B7DF06F2176DD27300C7FBAF /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B7DF06F0176DD27300C7FBAF /* Icon@2x.png */; };
 		B7DF06F3176DD27300C7FBAF /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B7DF06F1176DD27300C7FBAF /* Icon.png */; };
 		B7DF06F5176DD28F00C7FBAF /* AppIcon@120.png in Resources */ = {isa = PBXBuildFile; fileRef = B7DF06F4176DD28F00C7FBAF /* AppIcon@120.png */; };
+		B7DF06F8176DDB3E00C7FBAF /* iToast.m in Sources */ = {isa = PBXBuildFile; fileRef = B7DF06F7176DDB3E00C7FBAF /* iToast.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,6 +150,8 @@
 		B7DF06F0176DD27300C7FBAF /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		B7DF06F1176DD27300C7FBAF /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		B7DF06F4176DD28F00C7FBAF /* AppIcon@120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon@120.png"; sourceTree = "<group>"; };
+		B7DF06F6176DDB3E00C7FBAF /* iToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iToast.h; sourceTree = "<group>"; };
+		B7DF06F7176DDB3E00C7FBAF /* iToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iToast.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +246,8 @@
 		0A0E7051176D2EBB00D9D5C2 /* Checkout */ = {
 			isa = PBXGroup;
 			children = (
+				B7DF06F6176DDB3E00C7FBAF /* iToast.h */,
+				B7DF06F7176DDB3E00C7FBAF /* iToast.m */,
 				B7DF06F4176DD28F00C7FBAF /* AppIcon@120.png */,
 				B7DF06F0176DD27300C7FBAF /* Icon@2x.png */,
 				B7DF06F1176DD27300C7FBAF /* Icon.png */,
@@ -460,6 +465,7 @@
 				0A0E7062176D2EBB00D9D5C2 /* FirstViewController.m in Sources */,
 				0A0E7058176D2EBB00D9D5C2 /* main.m in Sources */,
 				0AD3AB41176DB7BF0005B28F /* PayPalViewController.m in Sources */,
+				B7DF06F8176DDB3E00C7FBAF /* iToast.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

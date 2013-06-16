@@ -9,6 +9,7 @@
 #import "SecondViewController.h"
 #import "AppDelegate.h"
 #import "Item.h"
+#import "itoast.h"
 
 @interface SecondViewController ()
 
@@ -136,6 +137,9 @@ NSString * itemId;
         subTotalResult = [NSString stringWithFormat:@"%.2f", subTotalFloat];
         
         appDelegate.subTotal = subTotalResult;
+        
+        [[[[iToast makeText:NSLocalizedString(@"Added to Cart", @"")]
+           setGravity:iToastGravityBottom] setDuration:iToastDurationShort] show];
     }
 }
 
