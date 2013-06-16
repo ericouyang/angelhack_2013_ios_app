@@ -9,7 +9,7 @@
 #import "SecondViewController.h"
 #import "AppDelegate.h"
 #import "Item.h"
-#import "itoast.h"
+#import "iToast.h"
 
 @interface SecondViewController ()
 
@@ -79,7 +79,7 @@ NSString * itemId;
     NSLog(@"%@", itemName);
     NSLog(@"%@", itemPrice);
     
-    NSString *description = [NSString stringWithFormat:@"You've scanned %@.\nCost: %@", itemDescription, itemPrice];
+    NSString *description = [NSString stringWithFormat:@"%@\n%@", itemDescription, itemPrice];
     
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle: itemName message: description delegate: self cancelButtonTitle:@"Close" otherButtonTitles:@"Add to Cart", nil];
     [alert show];
